@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">Dashboard</div>
+            <nav>
+                <ul>
+                    <li><a href="dashboard.html" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="products.html"><i class="fas fa-box-open"></i> Data Produk</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <h1>Dashboard</h1>
+            </header>
+
+            <section class="summary-cards">
+                <div class="card" id="totalProductsCard">
+                    <div class="card-icon"><i class="fas fa-shopping-bag"></i></div> 
+                    <p class="card-label">Total Products</p>
+                    <h2 class="card-value" id="totalProducts">120</h2> 
+                </div>
+
+                <div class="card" id="totalSalesCard">
+                    <div class="card-icon"><i class="fas fa-shopping-cart"></i></div>
+                    <p class="card-label">Total Sales</p>
+                    <h2 class="card-value" id="totalSales">80</h2> 
+                </div>
+
+                <div class="card" id="totalRevenueCard">
+                    <div class="card-icon"><i class="fas fa-dollar-sign"></i></div>
+                    <p class="card-label">Total Revenue</p>
+                    <h2 class="card-value" id="totalRevenue"> Rp 12.500.000</h2> 
+                </div>
+            </section>
+
+            <section class="action-area">
+                <button id="viewProductsBtn" class="btn-products">
+                    Lihat Data Produk
+                </button>
+            </section>
+            
+        </main>
+    </div>
+    
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

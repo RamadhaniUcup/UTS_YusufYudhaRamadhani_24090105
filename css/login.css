@@ -1,0 +1,180 @@
+/* RESET & GLOBAL */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #3F3F77; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* CONTAINER LOGIN */
+.login-container {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* ILUSTRASI */
+/* ILUSTRASI */
+.login-illustration {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* pastikan gambar tidak keluar container */
+}
+
+.illustration-image {
+    width: 100%;         /* mengambil seluruh lebar container */
+    height: 100%;        /* mengambil seluruh tinggi container */
+    object-fit: cover;   /* menjaga proporsi gambar agar tidak terdistorsi */
+    border-radius: 0;    /* optional, hilangkan border-radius agar full */
+}
+
+/* FORM LOGIN */
+.login-form-wrapper {
+    flex: 1;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-title {
+    font-size: 2em;
+    font-weight: 700;
+    color: #1f2937; /* teks utama seperti dashboard */
+    margin-bottom: 10px;
+}
+
+.form-subtitle {
+    font-size: 1em;
+    color: #6b7280; /* teks sekunder */
+    margin-bottom: 30px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #2563eb; /* biru aksen seperti halaman produk */
+    outline: none;
+}
+
+/* ERROR MESSAGE */
+.error-message {
+    color: #dc2626;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* TOMBOL LOGIN */
+.btn {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: #2563eb; /* biru aksen sama product/dashboard */
+    color: white;
+    margin-bottom: 15px;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+/* TOMBOL SOSIAL */
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    margin-bottom: 15px;
+}
+
+.google-btn, .facebook-btn {
+    background-color: #ffffff; /* sama semua */
+    border: 1px solid #d1d5db;
+    color: #1f2937;
+}
+
+.google-btn img, .facebook-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.google-btn:hover, .facebook-btn:hover {
+    opacity: 0.85;
+}
+
+/* FORGOT PASSWORD */
+.forgot-password {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.forgot-password a {
+    font-size: 0.9em;
+    color: #2563eb; /* sama aksen biru */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.forgot-password a:hover {
+    color: #1d4ed8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+    }
+
+    .login-illustration {
+        display: none;
+    }
+
+    .login-form-wrapper {
+        padding: 40px 20px;
+    }
+}

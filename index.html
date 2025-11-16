@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+<div class="login-container">
+    <!-- Ilustrasi -->
+    <div class="login-illustration">
+        <img src="IMG/gambar2.png" class="illustration-image" alt="Login Illustration">
+    </div>
+
+    <!-- Form -->
+    <div class="login-form-wrapper">
+        <h1 class="form-title">Masuk</h1>
+        <p class="form-subtitle">Silakan login untuk melanjutkan ke dashboard</p>
+
+        <div id="errorMessage" class="error-message"></div>
+
+        <div class="input-group">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Masukkan email">
+        </div>
+
+        <div class="input-group">
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Masukkan password">
+        </div>
+
+        <!-- Forgot Password -->
+        <div class="forgot-password">
+            <a href="#" id="forgotPasswordLink">Lupa Password?</a>
+        </div>
+
+        <!-- Tombol Login -->
+        <button type="button" id="btnLogin" class="btn btn-primary">Login</button>
+
+        <!-- Tombol Sosial -->
+        <button type="button" class="social-btn google-btn">
+            <img src="IMG/Gogle.jpg" alt="Google"> Masuk dengan Google
+        </button>
+        <button type="button" class="social-btn facebook-btn">
+            <img src="IMG/FB.jpg" alt="Facebook"> Masuk dengan Facebook
+        </button>
+    </div>
+</div>
+
+<!-- SCRIPT LOGIN -->
+<script>
+document.getElementById("btnLogin").addEventListener("click", function () {
+    let email = document.getElementById("email").value.trim();
+    let pass = document.getElementById("password").value.trim();
+
+    if(email === "" || pass === "") {
+        document.getElementById("errorMessage").innerText = "Email atau password tidak boleh kosong!";
+        return;
+    }
+
+    // LOGIN BERHASIL → PINDAH HALAMAN
+    window.location.href = "dashboard.html";
+});
+
+// Tombol Forgot Password
+document.getElementById("forgotPasswordLink").addEventListener("click", function(e){
+    e.preventDefault();
+    alert("Fitur reset password belum tersedia.");
+});
+</script>
+
+</body>
+</html>
